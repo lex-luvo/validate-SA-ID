@@ -47,7 +47,7 @@ export default function Home() {
               onClick={handleValidate}
               className="w-full bg-red-400 hover:bg-red-700 text-white py-2 px-4 rounded"
           >
-            Validate
+            Find out
           </button>
 
           {validationMessage && (

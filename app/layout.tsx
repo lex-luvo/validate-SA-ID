@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${jetbrainsMono.variable} content-wrapper`}>
+    <body className={`${jetbrainsMono.className} content-wrapper`}>
     {children}
     </body>
     </html>
