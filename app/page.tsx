@@ -51,7 +51,7 @@ export default function Home() {
           </button>
 
           {validationMessage && (
-              <p className={`mt-4 text-center text-lg font-medium ${validationMessage.startsWith("✅") ? "text-green-500" : "text-green-500"}`}>
+              <p className={`mt-4 text-center text-lg font-medium ${validationMessage.startsWith("✅") ? "text-green-500" : "text-red-500"}`}>
                 {validationMessage}
               </p>
           )}
