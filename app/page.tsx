@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { isIdNumberValid, getRandomInvalidMessage } from '../lib/validateIdNumber';
+import { isIdNumberValid, getRandomInvalidMessage } from '@/lib/validateIdNumber';
 
 export default function Home() {
   const [idNumber, setIdNumber] = useState("");
@@ -45,7 +45,7 @@ export default function Home() {
           />
           <button
               onClick={handleValidate}
-              className="w-full bg-green-400 hover:bg-green-700 text-white py-2 px-4 rounded"
+              className="w-full bg-green-400 hover:bg-green-700 hover:cursor-pointer text-white py-2 px-4 rounded"
           >
             Find out
           </button>
