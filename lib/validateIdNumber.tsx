@@ -1,7 +1,7 @@
-export function luhnCheck(idNumber) {
+export function luhnCheck(idNumber: string) {
     let checkSum = 0;
     for (let i = 0; i < 13; i++) {
-        let digit = parseInt(idNumber[i], 10);
+        const digit = parseInt(idNumber[i], 10);
         let temp = i % 2 === 0 ? digit : digit * 2;
         if (temp > 9) temp = Math.floor(temp / 10) + (temp % 10);
         checkSum += temp;
@@ -9,14 +9,14 @@ export function luhnCheck(idNumber) {
     return checkSum % 10 === 0;
 }
 
-export function isDateValid(day, month, year) {
+export function isDateValid(day: number, month: number, year:number) {
     if (month < 1 || month > 12 || day < 1 || day > 31) return false;
     const daysInMonth = new Date(year, month, 0).getDate();
     return day <= daysInMonth;
 }
 
-export function isIdNumberValid(idNumber) {
-    if (typeof idNumber !== 'string' || idNumber.length !== 13) return false;
+export function isIdNumberValid(idNumber: string) {
+    if (idNumber.length !== 13) return false;
     if (/[^0-9]/.test(idNumber)) return false;
 
     const year = parseInt(idNumber.slice(0, 2), 10);
