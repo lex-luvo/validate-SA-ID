@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-black to-red-950">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-black to-green-950">
         <div className="p-6 rounded shadow-md w-full max-w-md">
           <p className="text-2xl text-white font-bold text-center mb-4">
             Validate if a given South African ID number is legit and avoid getting scammed!
@@ -41,17 +41,17 @@ export default function Home() {
               value={idNumber}
               onChange={handleInputChange}
               placeholder="Enter 13-digit ID number"
-              className="w-full border px-4 py-2 rounded mb-4 text-white bg-gray-900 focus:outline-none focus:ring-2 focus:ring-red-600"
+              className="w-full border px-4 py-2 rounded mb-4 text-white bg-gray-900 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
           <button
               onClick={handleValidate}
-              className="w-full bg-red-400 hover:bg-red-700 text-white py-2 px-4 rounded"
+              className="w-full bg-green-400 hover:bg-green-700 text-white py-2 px-4 rounded"
           >
             Find out
           </button>
 
           {validationMessage && (
-              <p className={`mt-4 text-center text-lg font-medium ${validationMessage.startsWith("✅") ? "text-green-500" : "text-red-500"}`}>
+              <p className={`mt-4 text-center text-lg font-medium ${validationMessage.startsWith("✅") ? "text-green-500" : "text-green-500"}`}>
                 {validationMessage}
               </p>
           )}
